@@ -47,14 +47,14 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            tbx_codigo = new TextBox();
             dataGridView1 = new DataGridView();
             Produto = new DataGridViewTextBoxColumn();
             Qtd = new DataGridViewTextBoxColumn();
             Unitario = new DataGridViewTextBoxColumn();
             Total = new DataGridViewTextBoxColumn();
             btn_adicionar = new Button();
+            lbl_valortotal = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -91,6 +91,7 @@
             btn_coxinha.Size = new Size(75, 65);
             btn_coxinha.TabIndex = 2;
             btn_coxinha.UseVisualStyleBackColor = true;
+            btn_coxinha.Click += btn_coxinha_Click;
             // 
             // btn_esfiha
             // 
@@ -101,6 +102,7 @@
             btn_esfiha.TabIndex = 3;
             btn_esfiha.TextAlign = ContentAlignment.BottomCenter;
             btn_esfiha.UseVisualStyleBackColor = true;
+            btn_esfiha.Click += btn_esfiha_Click;
             // 
             // btn_pastel
             // 
@@ -110,6 +112,7 @@
             btn_pastel.Size = new Size(75, 65);
             btn_pastel.TabIndex = 4;
             btn_pastel.UseVisualStyleBackColor = true;
+            btn_pastel.Click += btn_pastel_Click;
             // 
             // btn_bolin
             // 
@@ -119,6 +122,7 @@
             btn_bolin.Size = new Size(75, 65);
             btn_bolin.TabIndex = 5;
             btn_bolin.UseVisualStyleBackColor = true;
+            btn_bolin.Click += btn_bolin_Click;
             // 
             // btn_suco
             // 
@@ -129,6 +133,7 @@
             btn_suco.Size = new Size(85, 70);
             btn_suco.TabIndex = 6;
             btn_suco.UseVisualStyleBackColor = true;
+            btn_suco.Click += btn_suco_Click;
             // 
             // btn_cafe
             // 
@@ -139,6 +144,7 @@
             btn_cafe.Size = new Size(86, 64);
             btn_cafe.TabIndex = 7;
             btn_cafe.UseVisualStyleBackColor = true;
+            btn_cafe.Click += btn_cafe_Click;
             // 
             // groupBox1
             // 
@@ -173,6 +179,7 @@
             btn_refri.Size = new Size(75, 64);
             btn_refri.TabIndex = 8;
             btn_refri.UseVisualStyleBackColor = true;
+            btn_refri.Click += btn_refri_Click;
             // 
             // btn_cancelar
             // 
@@ -182,6 +189,7 @@
             btn_cancelar.TabIndex = 10;
             btn_cancelar.Text = "Cancelar";
             btn_cancelar.UseVisualStyleBackColor = true;
+            btn_cancelar.Click += btn_cancelar_Click;
             // 
             // btn_receber
             // 
@@ -191,6 +199,7 @@
             btn_receber.TabIndex = 11;
             btn_receber.Text = "Receber e finalizar";
             btn_receber.UseVisualStyleBackColor = true;
+            btn_receber.Click += btn_receber_Click;
             // 
             // pictureBox1
             // 
@@ -239,20 +248,12 @@
             label5.TabIndex = 17;
             label5.Text = "Valor Total";
             // 
-            // textBox1
+            // tbx_codigo
             // 
-            textBox1.Location = new Point(687, 211);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(837, 560);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 20;
-            textBox2.Text = "R$ 0,00";
+            tbx_codigo.Location = new Point(687, 211);
+            tbx_codigo.Name = "tbx_codigo";
+            tbx_codigo.Size = new Size(100, 23);
+            tbx_codigo.TabIndex = 19;
             // 
             // dataGridView1
             // 
@@ -294,17 +295,26 @@
             btn_adicionar.TabIndex = 22;
             btn_adicionar.Text = "Adicionar";
             btn_adicionar.UseVisualStyleBackColor = true;
+            btn_adicionar.Click += btn_adicionar_Click;
+            // 
+            // lbl_valortotal
+            // 
+            lbl_valortotal.BackColor = SystemColors.AppWorkspace;
+            lbl_valortotal.Location = new Point(756, 554);
+            lbl_valortotal.Name = "lbl_valortotal";
+            lbl_valortotal.Size = new Size(253, 23);
+            lbl_valortotal.TabIndex = 23;
             // 
             // UPDVTela
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1168, 652);
+            ClientSize = new Size(1129, 625);
+            Controls.Add(lbl_valortotal);
             Controls.Add(btn_adicionar);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbx_codigo);
             Controls.Add(label5);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
@@ -350,13 +360,14 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox tbx_codigo;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Produto;
         private DataGridViewTextBoxColumn Qtd;
         private DataGridViewTextBoxColumn Unitario;
         private DataGridViewTextBoxColumn Total;
         private Button btn_adicionar;
+        private Label totalfinal2;
+        private Label lbl_valortotal;
     }
 }

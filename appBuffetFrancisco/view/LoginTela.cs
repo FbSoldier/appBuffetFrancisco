@@ -25,13 +25,14 @@ namespace appBuffetFrancisco.view
         private void btn_acessar_Click(object sender, EventArgs e)
         {
             string usuario = txb_usuario.Text;
-                string senha = txb_senha.Text;
-            
-            if(usuario== "admin" && senha == "123")
+            string senha = txb_senha.Text;
+
+            if (usuario == "admin" && senha == "123")
             {
-                this.Visible = false;
-               MenuTela Menu = new MenuTela();
-                Menu.Show(this);
+                this.Hide();
+                MenuTela Menu = new MenuTela();
+                Menu.FormClosed += (s, args) => this.Close();
+                Menu.Show();
             }
             else
             {
