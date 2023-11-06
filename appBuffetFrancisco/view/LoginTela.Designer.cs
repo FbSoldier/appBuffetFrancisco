@@ -77,6 +77,7 @@
             txb_usuario.Name = "txb_usuario";
             txb_usuario.Size = new Size(180, 23);
             txb_usuario.TabIndex = 3;
+            txb_usuario.Text = "admin";
             // 
             // txb_senha
             // 
@@ -85,6 +86,7 @@
             txb_senha.PasswordChar = '*';
             txb_senha.Size = new Size(180, 23);
             txb_senha.TabIndex = 4;
+            txb_senha.Text = "123";
             // 
             // btn_acessar
             // 
@@ -107,7 +109,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.MicrosoftTeams_image;
-            pictureBox1.Location = new Point(518, 23);
+            pictureBox1.Location = new Point(518, 44);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(270, 242);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;

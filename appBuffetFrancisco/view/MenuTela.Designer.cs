@@ -60,7 +60,7 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "S&air";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -76,7 +76,7 @@
             // 
             desfazerToolStripMenuItem.Name = "desfazerToolStripMenuItem";
             desfazerToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Z;
-            desfazerToolStripMenuItem.Size = new Size(180, 22);
+            desfazerToolStripMenuItem.Size = new Size(141, 22);
             desfazerToolStripMenuItem.Text = "&Abrir";
             desfazerToolStripMenuItem.Click += desfazerToolStripMenuItem_Click;
             // 
@@ -90,7 +90,7 @@
             // sumárioToolStripMenuItem
             // 
             sumárioToolStripMenuItem.Name = "sumárioToolStripMenuItem";
-            sumárioToolStripMenuItem.Size = new Size(180, 22);
+            sumárioToolStripMenuItem.Size = new Size(118, 22);
             sumárioToolStripMenuItem.Text = "&Créditos";
             // 
             // pictureBox1
